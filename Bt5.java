@@ -1,8 +1,10 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 public class Bt5 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		DecimalFormat lt = new DecimalFormat("#.##");
 		int a, b, c;
 		float delta;
 		System.out.print("nhap a");
@@ -16,8 +18,8 @@ public class Bt5 {
 			double KQ = (float)Math.sqrt(delta);
 		 	if(delta > 0){
 		 		System.out.println("phuong trinh co 2 nghiem");
-		 		System.out.println("X1 = " + (-b+KQ)/2*a);
-		 		System.out.print("X2 = " + (-b-KQ)/2*a);
+		 		System.out.println("X1 = " + lt.format((-b+KQ)/( 2*a)));
+		 		System.out.print("X2 = " + lt.format((-b-KQ)/( 2*a)));
 		 	}
 		 	else if(delta == 0){
 		 		System.out.println("phuong trinh co 1 nghiem kep X1 = X2 = " + -b/2*a);
